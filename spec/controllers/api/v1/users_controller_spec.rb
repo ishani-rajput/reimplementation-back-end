@@ -12,7 +12,7 @@ RSpec.describe Api::V1::UsersController, type: :controller do
 
   describe "POST #create" do
     it "creates a new user" do
-      post :create, params: { user: { name: "Alice", email: "alice@example.com", password: "password" } }
+      post :create, params: { user: { name: "Alex", email: "alex@example.com", password: "password" } }
       expect(response).to have_http_status(:created)
       expect(User.last.name).to eq("Alice")
     end
